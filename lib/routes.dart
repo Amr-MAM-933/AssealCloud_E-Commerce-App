@@ -7,6 +7,7 @@ import '/screens/home/home_screen.dart';
 import '/screens/splash_screen.dart';
 import '/screens/forgot_password/forgot_password_screen.dart';
 import '/screens/signup/signup_screen.dart';
+import '/screens/complete_profile/complete_profile_screen.dart';
 
 var routes = <String, WidgetBuilder>{
   InfoSplashScreen.screenId: (ctx) => InfoSplashScreen(),
@@ -16,4 +17,5 @@ var routes = <String, WidgetBuilder>{
   SplashScreen.screenId: (ctx) => SplashScreen(),
   HomeScreen.screenId: (ctx) => HomeScreen(),
   ForgotPasswordScreen.screenId: (ctx) => ForgotPasswordScreen(),
+  CompleteProfileScreen.screenId: (ctx) => CompleteProfileScreen(),
 };

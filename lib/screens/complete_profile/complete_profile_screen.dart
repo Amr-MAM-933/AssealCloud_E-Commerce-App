@@ -1,43 +1,43 @@
 import 'package:flutter/material.dart';
 
 import '/theme.dart';
-import 'widgets/signin_form.dart';
+import 'widgets/complete_profile_form.dart';
 import '/screen_size.dart';
 
-class SignInScreen extends StatelessWidget {
-  const SignInScreen({Key? key}) : super(key: key);
-  static const screenId = '/SignInScreen';
+class CompleteProfileScreen extends StatelessWidget {
+  const CompleteProfileScreen({Key? key}) : super(key: key);
+  static const screenId = '/CompleteProfileScreen';
 
   @override
   Widget build(BuildContext context) {
     late final AppBar appBar;
     return Scaffold(
-      appBar: appBar = AppBar(title: Text('SignIn')),
+      appBar: appBar = AppBar(title: Text('SignUp')),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30),
         child: SingleChildScrollView(
-          child: SizedBox(
+          child: Container(
             height: ScreenSize.cleanHeight(appBar: appBar),
             child: Column(
               children: <Widget>[
-                Spacer(flex: 2),
+                Spacer(flex: 4),
                 Align(
                   alignment: Alignment.center,
                   child: Text(
-                    'Welcome Back',
+                    'Complete Profile',
                     style: theme.textTheme.bodyText2!.copyWith(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
-                Spacer(),
+                Spacer(flex: 1),
                 Text(
-                  'SignIn with your email and password \n or continue with social media',
+                  'Complete your profile details',
                   textAlign: TextAlign.center,
                 ),
-                SignInForm(appBar: appBar),
-                Spacer(),
+                CompleteProfileForm(appBar: appBar),
+                Spacer(flex: 4),
               ],
             ),
           ),

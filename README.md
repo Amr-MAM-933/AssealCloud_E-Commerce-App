@@ -32,6 +32,9 @@
   <img src="./screenshots/6.png" style="margin: 0px 20px 0px 20px;"  height="600px"/>
 </p>
 
+<p align="middle">
+  <img src="./screenshots/7.png" style="margin: 0px 20px 0px 20px;"  height="600px"/>
+</p>
 
 ## <font color='6776FF'>Licence</font>
 

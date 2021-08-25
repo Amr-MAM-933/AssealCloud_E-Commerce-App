@@ -26,7 +26,7 @@ class SignUpScreen extends StatelessWidget {
                   child: Text(
                     'Register Account',
                     style: theme.textTheme.bodyText2!.copyWith(
-                      fontSize: 25,
+                      fontSize: 30,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

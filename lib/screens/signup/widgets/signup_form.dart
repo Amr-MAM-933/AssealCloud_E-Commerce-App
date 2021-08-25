@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:am_state/am_state.dart';
 
 import '/constants.dart';
 import '/screen_size.dart';
-import '/screens/login_success_screen.dart';
-import '/theme.dart';
 import '/widgets/custom_suffix_icon.dart';
 import '/widgets/main_button.dart';
 import '/widgets/social_card.dart';
+import '/screens/complete_profile/complete_profile_screen.dart';
 
 class SignUpForm extends StatelessWidget {
   SignUpForm({Key? key, required this.appBar}) : super(key: key);
@@ -41,7 +39,8 @@ class SignUpForm extends StatelessWidget {
                 onTap: () {
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
-                    Navigator.pushNamed(context, LoginSuccessScreen.screenId);
+                    Navigator.pushNamed(
+                        context, CompleteProfileScreen.screenId);
                   }
                   firstSubmit = false;
                 }),
@@ -111,33 +110,6 @@ class SignUpForm extends StatelessWidget {
         suffixIcon: customSuffixIcon(iconPath: "assets/icons/Lock.svg"),
       ),
       obscureText: true,
-    );
-  }
-
-  Widget buildRememberMeForgotPassword(BuildContext ctx) {
-    final rememberMe = AmDataProvider<bool>(
-      initialData: false,
-      providerId: 'rememberMe',
-    );
-    return Row(
-      children: [
-        AmRefreshWidget(
-          amDataProvider: rememberMe,
-          builder: (ctx, val) => Checkbox(
-            value: rememberMe.data,
-            activeColor: theme.primaryColor,
-            onChanged: (value) => rememberMe.data = value,
-          ),
-        ),
-        Text("Remember me"),
-        Spacer(),
-        TextButton(
-          onPressed: () {},
-          child: Text(
-            "Forgot password",
-          ),
-        ),
-      ],
     );
   }
 
